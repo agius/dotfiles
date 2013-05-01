@@ -1,4 +1,4 @@
-# holman does dotfiles
+# holman does dotfiles (and agius copies his work)
 
 ## dotfiles
 
