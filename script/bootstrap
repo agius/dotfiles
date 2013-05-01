@@ -129,5 +129,7 @@ then
   fi
 fi
 
+git submodule update --init
+
 echo ''
 echo '  All installed!'
