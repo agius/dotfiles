@@ -4,8 +4,8 @@
 [hub]
         protocol = https
 [user]
-        name = AUTHORNAME
-        email = AUTHOREMAIL
+        name = agius
+        email = andrew@atevans.com
 [credential]
         helper = osxkeychain
 [alias]
@@ -21,7 +21,7 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = vim
+        editor = emacs
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -35,4 +35,4 @@
         # for more information on different options of the below setting.
         #
         # Setting to git 2.0 default to surpress warning message
-        default = simple
+        # default = simple
