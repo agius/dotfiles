@@ -1,3 +1,6 @@
 [submodule "omz/oh-my-zsh"]
 	path = omz/oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "emacs/emacs.d.symlink/rails-reloaded"]
+	path = emacs/emacs.d.symlink/rails-reloaded
+	url = git://github.com/dima-exe/emacs-rails-reloaded.git
