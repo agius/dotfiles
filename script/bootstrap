@@ -119,6 +119,7 @@ install_dotfiles () {
 
 setup_gitconfig
 install_dotfiles
+git submodule update --init
 
 # If we are on a mac, lets install and setup homebrew
 if [ "$(uname -s)" == "Darwin" ]
@@ -131,8 +132,6 @@ then
     fail "error installing dependencies"
   fi
 fi
-
-git submodule update --init
 
 echo ''
 echo '  All installed!'
