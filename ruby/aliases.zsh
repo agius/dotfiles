@@ -6,3 +6,7 @@ alias sd='script/destroy'
 alias ss='bundle exec rake sunspot:solr:run'
 
 alias migrate='rake db:migrate db:test:clone'
+
+function prod() {
+  cd /var/www/$1/current && RAILS_ENV=production bundle exec rails c
+}
