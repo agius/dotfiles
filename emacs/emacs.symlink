@@ -1,0 +1,25 @@
+;; heresy -- fuck tabs, give me two spaces
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq indent-line-function 'insert-tab)
+
+;; set backup files location, auto-pruning
+(setq backup-directory-alist `(("." . "~/.saves")))
+(setq backup-by-copying t)
+(setq delete-old-versions t
+  kept-new-versions 6
+  kept-old-versions 2
+  version-control t)
+  
+;; autoloads
+(let ((default-directory "~/.emacs.d/"))
+      (normal-top-level-add-subdirs-to-load-path))
+
+;; rails-reloaded
+(setq load-path (cons (expand-file-name "~/.emacs.d/rails-reloaded") load-path))
+  (require 'rails-autoload)
+
+;; line numbers
+(require 'linum)
+(setq linum-format "%d ")
+(global-linum-mode 1)
