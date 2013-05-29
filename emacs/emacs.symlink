@@ -25,4 +25,4 @@
 (global-linum-mode 1)
 
 ;; goto line command
-(global-set-key "\C-l" 'goto-line)
+(global-set-key (kbd "C-c l") 'goto-line)
