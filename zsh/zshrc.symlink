@@ -41,7 +41,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(git capistrano gem github heroku knife rails3 redis-cli ruby textmate)
+plugins=(git bundler brew capistrano gem github heroku knife node npm nyan rails3 redis-cli ruby textmate)
 # rbenv plugin handled manually to get rid of annoying message
 
 source $ZSH/oh-my-zsh.sh
