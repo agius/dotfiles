@@ -1,0 +1,3 @@
+fr() { 
+  egrep -lRZ "$1" --exclude-dir='.git' --exclude-dir='db' --exclude-dir='tmp' --exclude-dir='images' --exclude-dir='fonts' --exclude-dir='vendor' . | xargs -I {} sed -i '' -e 's/$1/$2/g' {} 
+}

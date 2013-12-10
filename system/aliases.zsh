@@ -8,3 +8,5 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+alias st="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
