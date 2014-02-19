@@ -10,3 +10,4 @@ then
 fi
 
 alias st="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias sub='find . -name "*.sublime-project" | head -1 | xargs subl --project'
