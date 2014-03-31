@@ -41,7 +41,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(git bundler brew capistrano gem github heroku knife node npm nyan rails3 redis-cli ruby textmate sublime bower)
+plugins=(git bundler brew capistrano gem github heroku knife node npm nyan rails3 redis-cli ruby textmate sublime3 bower)
 # rbenv plugin handled manually to get rid of annoying message
 
 source $ZSH/oh-my-zsh.sh
@@ -109,3 +109,4 @@ function _gitprompt {
 
 PROMPT='%{$fg[blue]%}%m:%{$fg_bold[green]%}%p%{$fg[cyan]%}%c %{$fg_bold[blue]%}$(_gitprompt)%{$fg_bold[blue]%} % %{$reset_color%}'
 
+source /usr/local/opt/autoenv/activate.sh
