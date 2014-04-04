@@ -51,7 +51,7 @@ source $ZSH/oh-my-zsh.sh
 # ZSH=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/Projects
+# export PROJECTS=~/Projects
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
@@ -107,6 +107,6 @@ function _gitprompt {
     echo "$(git_prompt_info)" # or whatever you use to display the git prompt
 }
 
-PROMPT='%{$fg[blue]%}%m:%{$fg_bold[green]%}%p%{$fg[cyan]%}%c %{$fg_bold[blue]%}$(_gitprompt)%{$fg_bold[blue]%} % %{$reset_color%}'
+PROMPT='%{$fg[blue]%}%m:%{$fg[cyan]%}%1~ %{$fg_bold[blue]%}$(_gitprompt)%{$fg_bold[blue]%} %{$reset_color%}'
 
 source /usr/local/opt/autoenv/activate.sh
