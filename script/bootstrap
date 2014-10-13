@@ -117,8 +117,18 @@ install_dotfiles () {
   done
 }
 
+install_antigen () {
+  info 'installing antigen'
+
+  if ! [ -f ~/.antigen-git ]
+  then
+    git clone https://github.com/zsh-users/antigen.git ~/.antigen-git
+  fi
+}
+
 setup_gitconfig
 install_dotfiles
+install_antigen
 git submodule update --init
 
 # If we are on a mac, lets install and setup homebrew

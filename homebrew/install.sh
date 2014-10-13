@@ -14,6 +14,6 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark
+brew install autoconf autoenv automake brew-cask chromedriver ctags ec2-api-tools freetype gdbm git imagemagick jpeg libevent libgpg-error libksba libpng libtool libyaml node openssl ossp-uuid pcre pkg-config postgresql pstree qt rbenv readline redis ruby-build s3cmd ssh-copy-id the_silver_searcher tmux tree watch wget xz zsh
 
 exit 0
