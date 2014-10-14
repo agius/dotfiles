@@ -1,0 +1,14 @@
+if which subl &>/dev/null ; then
+  if [[ -n "*.sublime-workspace(#qN)" ]] ; then
+    echo "subl $(/bin/ls *.sublime-workspace | /usr/bin/head -1)"
+    subl "$(/bin/ls *.sublime-workspace | /usr/bin/head -1)"
+  elif [[ -n "*.sublime-project(#qN)" ]] ; then
+    echo "subl $(/bin/ls *.sublime-project | /usr/bin/head -1)"
+    subl "$(/bin/ls *.sublime-project | /usr/bin/head -1)"
+  else
+    echo "subl ."
+    subl .
+  fi
+else
+  echo "Couldn't find binary: subl\n"
+fi
