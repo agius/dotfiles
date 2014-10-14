@@ -25,7 +25,7 @@ fi
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme agius/dotfiles themes/agius
+antigen theme $ZSH/themes/agius.zsh-theme
 
 # Tell antigen that you're done.
 antigen apply

@@ -5,9 +5,9 @@ function ret_status(){
 function is_prd(){
   if [[ "${RAILS_ENV:=development}" == "production" || "${NODE_ENV:=development}" == "production" ]]
   then
-    echo "%{$fg_bold[red]%}-prd- %n@%m"
+    echo "%{$fg[magenta]%}-prd- %n@%m"
   else
-    echo "%{$fg_bold[green]%}%n@%m"
+    echo "%{$fg[magenta]%}%n@%m"
   fi
 }
 
