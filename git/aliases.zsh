@@ -23,4 +23,4 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gpr="git pull --rebase"
 
 # major git functions
-alias git_delete_merged="git branch -d `git branch --merged | grep -v '^*' | grep -v 'master' | tr -d '\n'`"
+alias git_delete_merged='git branch -d `git branch --merged | grep -v "^*" | grep -v "master" | tr -d "\n"`'
