@@ -1,4 +1,4 @@
-source ~/.antigen-git/antigen.zsh
+source $HOME/.antigen-git/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -11,11 +11,15 @@ antigen bundle rails
 antigen bundle ruby
 antigen bundle rake
 antigen bundle rbenv
-antigen bundle brew
+if which brew &>/dev/null; then
+  antigen bundle brew
+fi
 antigen bundle ssh-agent
 antigen bundle sublime
 antigen bundle zeus
-antigen bundle sharat87/autoenv
+if which brew &>/dev/null; then
+  antigen bundle sharat87/autoenv
+fi
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting

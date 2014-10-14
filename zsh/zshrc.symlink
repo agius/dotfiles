@@ -1,9 +1,9 @@
 # Customize to your needs...
 # shortcut to this dotfiles path is $ZSH
-# ZSH=$HOME/.dotfiles
+ZSH=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
-# export PROJECTS=~/Projects
+export PROJECTS=$HOME/Projects
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
@@ -19,18 +19,12 @@ config_files=($HOME/.dotfiles/**/*.zsh)
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
 do
-  if [[ $file =~ "oh-my-zsh" ]] ; then
-    continue
-  fi
   source $file
 done
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
 do
-  if [[ $file =~ "oh-my-zsh" ]] ; then
-    continue
-  fi
   source $file
 done
 
@@ -41,9 +35,6 @@ done
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
-  if [[ $file =~ "oh-my-zsh" ]] ; then
-    continue
-  fi
   source $file
 done
 

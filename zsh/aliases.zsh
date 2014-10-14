@@ -1,5 +1,4 @@
 alias reload!='. ~/.zshrc'
-alias mate='st'
+alias mate='subl'
 alias librarian-chef='bundle exec librarian-chef'
 alias librarian='bundle exec librarian-chef'
-alias st='ruby ~/.dotfiles/script/sublime.rb'
