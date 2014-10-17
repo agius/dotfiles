@@ -10,6 +10,7 @@ antigen bundle node
 antigen bundle rails
 antigen bundle ruby
 antigen bundle rake
+antigen bundle bundler
 antigen bundle rbenv
 if which brew &>/dev/null; then
   antigen bundle brew
