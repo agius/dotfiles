@@ -1,6 +1,12 @@
-syntax enable           " enable syntax processing
-set number              " show line numbers
-set showcmd             " show command in bottom bar
-set tabstop=2           " number of visual spaces per TAB
-set shiftwidth=2        " number of tabs to auto-indent
-set expandtab           " tabs are spaces
+syntax enable                   " enable syntax processing
+set number                      " show line numbers
+set showcmd                     " show command in bottom bar
+set tabstop=2                   " number of visual spaces per TAB
+set shiftwidth=2                " number of tabs to auto-indent
+set expandtab                   " tabs are spaces
+
+" Start commit msgs in insert mode
+:autocmd VimEnter */COMMIT_EDITMSG startinsert
+
+" start blank files in insert mode, files with content in normal mode
+:autocmd VimEnter * if empty(expand("%")) | startinsert | endif
