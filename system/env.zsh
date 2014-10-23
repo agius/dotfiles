@@ -1,15 +1,13 @@
-if which slap &>/dev/null; then
-  export EDITOR='slap'
+if which vim &>/dev/null; then
+  export EDITOR="vim"
 elif which subl &>/dev/null; then
   export EDITOR="subl"
-elif which mate &>/dev/null; then
-  export EDITOR="mate"
-elif which vim &>/dev/null; then
-  export EDITOR="vim"
-elif which vi &>/dev/null; then
-  export EDITOR="vi"
+elif which slap &>/dev/null; then
+  export EDITOR='slap'
 elif which emacs &>/dev/null; then
   export EDITOR="emacs"
+elif which vi &>/dev/null; then
+  export EDITOR="vi"
 elif which nano &>/dev/null; then
   export EDITOR="nano"
 fi
