@@ -1,8 +1,8 @@
 if which subl &>/dev/null ; then
-  if [[ -n "*.sublime-workspace(#qN)" ]] ; then
+  if ls *.sublime-workspace &>/dev/null ; then
     echo "subl $(/bin/ls *.sublime-workspace | /usr/bin/head -1)"
     subl "$(/bin/ls *.sublime-workspace | /usr/bin/head -1)"
-  elif [[ -n "*.sublime-project(#qN)" ]] ; then
+  elif ls *.sublime-project &>/dev/null ; then
     echo "subl $(/bin/ls *.sublime-project | /usr/bin/head -1)"
     subl "$(/bin/ls *.sublime-project | /usr/bin/head -1)"
   else
