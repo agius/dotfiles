@@ -1,1 +1,3 @@
-alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+if [[ -a /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app ]] ; then
+  alias ios="open Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app"
+fi

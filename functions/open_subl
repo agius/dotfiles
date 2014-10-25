@@ -1,8 +1,8 @@
 if which subl &>/dev/null ; then
-  if ls *.sublime-workspace &>/dev/null ; then
+  if ls | grep 'sublime-workspace' ; then
     echo "subl $(/bin/ls *.sublime-workspace | /usr/bin/head -1)"
     subl "$(/bin/ls *.sublime-workspace | /usr/bin/head -1)"
-  elif ls *.sublime-project &>/dev/null ; then
+  elif ls | grep 'sublime-project' &>/dev/null ; then
     echo "subl $(/bin/ls *.sublime-project | /usr/bin/head -1)"
     subl "$(/bin/ls *.sublime-project | /usr/bin/head -1)"
   else
