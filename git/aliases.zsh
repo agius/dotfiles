@@ -18,7 +18,7 @@ alias gco='git checkout'
 alias gb='git branch'
 # git track - set current branch to same upstream
 alias gt='BRANCH=`git rev-parse --abbrev-ref HEAD` && git branch $BRANCH --set-upstream-to origin/$BRANCH'
-alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
+alias gs='git status -b' # upgrade your git if -sb breaks for you. it's fun.
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gpr="git pull --rebase"
 
