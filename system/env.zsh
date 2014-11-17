@@ -12,6 +12,10 @@ elif which nano &>/dev/null; then
   export EDITOR="nano"
 fi
 
+if [[ -n $RBENV_VERSION ]] ; then
+  export RBENV_VERSION=''
+fi
+
 if which brew &>/dev/null && brew info ec2-api-tools &>/dev/null ; then
   local ec2_version="$(brew info ec2-api-tools | tail +1 | head -1)"
   export EC2_HOME="/usr/local/Cellar/ec2-api-tools/${ec2_version##* }/libexec"
