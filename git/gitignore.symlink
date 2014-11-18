@@ -62,8 +62,6 @@ pickle-email-*.html
 /.bundle
 /vendor/bundle
 /vendor/assets/bower_components
-*.bowerrc
-bower.json
 
 # Node #
 ########
