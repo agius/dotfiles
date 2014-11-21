@@ -47,7 +47,6 @@ Thumbs.db
 
 # Rails #
 #########
-### Rails ###
 *.rbc
 capybara-*.html
 .rspec
