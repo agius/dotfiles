@@ -16,6 +16,7 @@ alias gc='git commit'
 alias gca='git commit -a'
 alias gco='git checkout'
 alias gb='git branch'
+alias gbb='for branch in `git branch --list -a --no-merged | grep -v HEAD`; do echo -e `git show --format="%Cblue %ci %m %Cgreen %an %m %Creset" $branch | head -n 1` \\t$branch; done | sort -r | head -n 20'
 # git track - set current branch to same upstream
 alias gt='BRANCH=`git rev-parse --abbrev-ref HEAD` && git branch $BRANCH --set-upstream-to origin/$BRANCH'
 alias gs='git status -b' # upgrade your git if -sb breaks for you. it's fun.
