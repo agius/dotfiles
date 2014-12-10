@@ -120,10 +120,7 @@ install_dotfiles () {
 install_antigen () {
   info 'installing antigen'
 
-  if ! [ -f ~/.antigen-git ]
-  then
-    git clone https://github.com/zsh-users/antigen.git ~/.antigen-git
-  fi
+  [[ -d ~/.antigen-git ]] || git clone https://github.com/zsh-users/antigen.git ~/.antigen-git
 }
 
 setup_gitconfig
