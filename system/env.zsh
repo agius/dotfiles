@@ -19,10 +19,6 @@ fi
 if which brew &>/dev/null && brew info ec2-api-tools &>/dev/null ; then
   local ec2_version="$(brew info ec2-api-tools | tail +1 | head -1)"
   export EC2_HOME="/usr/local/Cellar/ec2-api-tools/${ec2_version##* }/libexec"
-  
-  if [ -d "/usr/libexec/java_home" ] || [ -h "/usr/libexec/java_home" ] ; then
-    export JAVA_HOME="/usr/libexec/java_home"
-  fi
 
   if [ -d "$HOME/.ec2" ] || [ -h "$HOME/.ec2" ] ; then
     if [[ $(/bin/ls $HOME/.ec2/) == "pk-*.pem" ]] && [[ $(/bin/ls $HOME/.ec2/) == "cert-*.pem" ]] ; then
