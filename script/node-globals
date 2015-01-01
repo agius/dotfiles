@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#
+# Node Globals
+#
+# The packages one always ends up using with Node
+# 
+
+npm install -g bower grunt-cli gulp yo generator-jekyllrb generator-mean

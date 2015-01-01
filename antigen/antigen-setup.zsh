@@ -7,6 +7,7 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle heroku
 antigen bundle node
+antigen bundle bower
 antigen bundle rails
 antigen bundle ruby
 antigen bundle rake
