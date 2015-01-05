@@ -1,4 +1,4 @@
-/var/log/{{ name }}.log {
+/var/log/APP_NAME.log {
   monthly
   rotate 12
   compress

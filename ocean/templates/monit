@@ -1,0 +1,7 @@
+check process APP_NAME with pidfile /var/run/APP_NAME.pid
+  start program = "/etc/init.d/APP_NAME start"
+  stop program = "/etc/init.d/APP_NAME stop"
+  if 5 restarts within 10 cycles then unmonitor
+
+check file restart_APP_NAME path /var/www/APP_NAME/restart.txt
+  if not exist then exec "/bin/bash -c 'echo dne > /dev/null'" else if succeeded then exec "/bin/bash -c 'monit restart APP_NAME && monit && rm /var/www/APP_NAME/restart.txt'"
