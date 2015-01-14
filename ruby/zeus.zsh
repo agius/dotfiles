@@ -1,2 +1,2 @@
-alias zi="zeus start"
-alias zs="zeus server"
+alias zi="bundle exec zeus start"
+alias zs="bundle exec zeus server"
