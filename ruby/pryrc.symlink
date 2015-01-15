@@ -1,0 +1,15 @@
+class Object
+  def grep_methods(regex, public_only = true)
+    regex = Regexp.new(regex) unless regex.is_a?(Regexp)
+    _methods = public_only ? public_methods : public_methods + private_methods + protected_methods
+    _methods.select{|m| m.to_s =~ regex }
+  end
+end
+
+if defined?(ActiveRecord)
+  class ActiveRecord::Base
+    def self.random
+      offset(rand(count)).first
+    end
+  end
+end
