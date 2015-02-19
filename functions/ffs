@@ -1,0 +1,11 @@
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+git add -A
+git stash
+git checkout master
+git pull
+bundle
+bundle exec rake db:migrate db:test:prepare spec:fixture_builder:clean spec:fixture_builder:construct
+git checkout -- db/structure.sql
+git checkout $BRANCH
+git stash pop
+git reset .
