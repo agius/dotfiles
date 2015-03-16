@@ -26,25 +26,6 @@ fail () {
   exit
 }
 
-setup_gitconfig () {
-  if ! [ -f git/gitconfig.symlink ]
-  then
-    info 'setup gitconfig'
-    # 
-    # user ' - What is your github author name?'
-    # read -e git_authorname
-    # user ' - What is your github author email?'
-    # read -e git_authoremail
-    # 
-    # sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" git/gitconfig.symlink.example > git/gitconfig.symlink
-    
-    # already customized for me - yay repo forking!
-    cp git/gitconfig.symlink.example git/gitconfig.symlink
-
-    success 'gitconfig'
-  fi
-}
-
 link_files () {
   ln -s $1 $2
   success "linked $1 to $2"
@@ -123,7 +104,6 @@ install_antigen () {
   [[ -d ~/.antigen-git ]] || git clone https://github.com/zsh-users/antigen.git ~/.antigen-git
 }
 
-setup_gitconfig
 install_dotfiles
 install_antigen
 
