@@ -1,3 +1,7 @@
+Pry.config.history.should_save = true
+Pry.config.history.should_load = true
+Pry.config.history.file = '~/.pry_history'
+
 class Object
   def grep_methods(regex, public_only = true)
     regex = Regexp.new(regex) unless regex.is_a?(Regexp)
