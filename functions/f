@@ -1,0 +1,5 @@
+local filedir
+filedir=$(dirname $1)
+mkdir -p $filedir &&
+touch $1 &&
+echo "Created $1"
