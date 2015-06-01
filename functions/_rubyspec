@@ -1,7 +1,0 @@
-if [[ -f ./zeus.json ]] ; then
-  bundle exec zeus spec $1
-elif [[ -f ./.rspec ]] ; then
-  bundle exec rspec $1
-else
-  bundle exec ruby -Itest $1
-fi
