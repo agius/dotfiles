@@ -12,8 +12,10 @@
         co = checkout
         promote = !$ZSH/bin/git-promote
         wtf     = !$ZSH/bin/git-wtf
-        rank-contributers = !$ZSH/bin/git-rank-contributers
         count   = !git shortlog -sn
+        addnw   = !sh -c 'git diff -w --no-color "$@" | git apply --cached --ignore-whitespace' -
+        amend   = !git commit --amend -C HEAD
+        rank-contributers = !$ZSH/bin/git-rank-contributers
 [color]
         diff = auto
         status = auto
