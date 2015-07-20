@@ -1,9 +1,10 @@
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 killall -m zeus || true && \
+sleep 1 && \
 git checkout master && \
 git pull && \
 bundle && \
 bundle exec rake db:migrate db:test:prepare spec:fixture_builder:clean spec:fixture_builder:construct && \
-git checkout -- db/structure.sql && \
+git checkout -- db/schema.rb && \
 git checkout $BRANCH && \
 git reset .
