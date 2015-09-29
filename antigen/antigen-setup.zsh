@@ -15,12 +15,14 @@ antigen bundle bundler
 antigen bundle rbenv
 if which brew &>/dev/null; then
   antigen bundle brew
+  antigen bundle sharat87/autoenv
 fi
 antigen bundle ssh-agent
 antigen bundle sublime
 antigen bundle zeus
-if which brew &>/dev/null; then
-  antigen bundle sharat87/autoenv
+
+if which boot2docker &>/dev/null; then
+  antigen bundle unixorn/docker-helpers.zshplugin
 fi
 
 # Syntax highlighting bundle.
