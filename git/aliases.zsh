@@ -13,6 +13,7 @@ alias gl='git pull --prune'
 alias gp='git push origin HEAD'
 alias gd='git diff'
 alias gc='git commit'
+alias gg='git_checkout_grep'
 alias gca='git commit -a'
 alias gco='git checkout'
 alias gb='git branch'
@@ -22,6 +23,8 @@ alias gpr="git pull --rebase"
 
 # pretty graph log
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+
+alias gsb='git checkout $(git branch | grep $1 | head -n1)'
 
 # show unmerged branches
 alias gbb='for branch in `git branch --list -a --no-merged | grep -v HEAD`; do echo -e `git show --format="%Cblue %ci %m %Cgreen %an %m %Creset" $branch | head -n 1` \\t$branch; done | sort -r | head -n 20'
