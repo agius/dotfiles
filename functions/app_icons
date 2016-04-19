@@ -31,4 +31,14 @@ sips --resampleWidth 75 "${f}/${1}" --out "${f}/icon-tab@3x.png"
 # toolbar / navbar
 sips --resampleWidth 22 "${f}/${1}" --out "${f}/icon-toolbar.png"
 sips --resampleWidth 44 "${f}/${1}" --out "${f}/icon-toolbar@2x.png"
-sips --resampleWidth 66 "${f}/${1}" --out "${f}/icon-toolbar@6x.png"
+sips --resampleWidth 66 "${f}/${1}" --out "${f}/icon-toolbar@3x.png"
+
+# safari icon sizes
+sips --resampleWidth 60 "${f}/${1}" --out "${f}/icon-safari-60.png"
+sips --resampleWidth 76 "${f}/${1}" --out "${f}/icon-safari.png"
+sips --resampleWidth 152 "${f}/${1}" --out "${f}/icon-safari@2x.png"
+
+# opengraph sizes
+sips --resampleWidth 206 "${f}/${1}" --out "${f}/icon-og.png"
+sips --resampleWidth 512 "${f}/${1}" --out "${f}/icon-og@2x.png"
+sips --resampleWidth 1024 "${f}/${1}" --out "${f}/icon-og@3x.png"

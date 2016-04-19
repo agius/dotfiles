@@ -1,3 +1,5 @@
-if which boot2docker &>/dev/null; then
-  eval "$(boot2docker shellinit --verbose=false &>/dev/null)"
+if which docker-machine &>/dev/null; then
+  if docker-machine status | grep -q Running; then
+    eval "$(docker-machine env default)"
+  fi
 fi

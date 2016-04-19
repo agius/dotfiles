@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+#
+# start services via launchctl
+
+DOTFILES_ROOT="`pwd`"
+LAUNCHAGENTS_DIR="$HOME/Library/LaunchAgents"
+LAUNCHCTL_PATH="/bin/launchctl"
+
+link_files () {
+  ln -s $1 $2
+  success "linked $1 to $2"
+}
+
+launch_services () {
+  if test $(uname -s) = 'Darwin'
+  then
+    for source in `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
+    do
+      dest="$LAUNCHAGENTS_DIR/.`basename \"${source%.*}\"`"
+
+      if [ -f $dest ] || [ -d $dest ]
+      then
+        echo "Skipping $source - symlink already exists"
+      else
+        link_files $source $dest
+        eval "$(LAUNCHCTL_PATH) load $dest"
+      fi
+  else
+    echo "Skipping launchctl because OS is not Darwin"
+  fi  
+}
