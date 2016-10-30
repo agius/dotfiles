@@ -2,36 +2,59 @@
 #
 
 [hub]
-        protocol = https
+  protocol = https
 [user]
-        name = agius
-        email = andrew@atevans.com
+  name = agius
+  email = andrew@atevans.com
 [credential]
-        helper = osxkeychain
+  helper = osxkeychain
 [alias]
-        co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        count   = !git shortlog -sn
-        addnw   = !sh -c 'git diff -w --no-color "$@" | git apply --cached --ignore-whitespace' -
-        amend   = !git commit --amend -C HEAD
-        rank-contributers = !$ZSH/bin/git-rank-contributers
+  co = checkout
+  promote = !$ZSH/bin/git-promote
+  wtf     = !$ZSH/bin/git-wtf
+  count   = !git shortlog -sn
+  addnw   = !sh -c 'git diff -w --no-color "$@" | git apply --cached --ignore-whitespace' -
+  amend   = !git commit --amend -C HEAD rank-contributers = !$ZSH/bin/git-rank-contributers
+  st = status
+  di = diff
+  ci = commit
+  br = branch
+  sta = stash
+  llog = log --date=local
+  flog = log --pretty=fuller --decorate
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lol = log --graph --decorate --oneline
+  lola = log --graph --decorate --oneline --all
+  blog = log origin/master... --left-right
+  ds = diff --staged
+  fixup = commit --fixup
+  squash = commit --squash
+  unstage = reset HEAD
+  rum = rebase master@{u}
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        ui = true
+  diff = auto
+  status = auto
+  branch = auto
+  ui = auto
+  interactive = auto
 [core]
-        excludesfile = ~/.gitignore
+  excludesfile = /Users/atevans/.gitignore
+  pager = less -FXRS -x2
 [apply]
-        whitespace = nowarn
+  whitespace = nowarn
 [mergetool]
-        keepBackup = false
+  keepBackup = false
 [difftool]
-        prompt = false
+  prompt = false
 [help]
-        autocorrect = 1
+  autocorrect = 1
 [http]
-	postBuffer = 524288000
+  postBuffer = 524288000
 [push]
-	default = simple
+  default = current
+[branch]
+  autosetupmerge = true
+[rebase]
+  autosquash = true
+[rerere]
+  enabled = true

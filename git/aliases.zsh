@@ -34,3 +34,5 @@ alias gt='BRANCH=`git rev-parse --abbrev-ref HEAD` && git branch $BRANCH --set-u
 
 # git delete merged
 alias gdm='git branch -d `git branch --merged | grep -v "^*" | grep -v "master" | tr -d "\n"`'
+
+alias gdun='git checkout master && git pull && gdm'
