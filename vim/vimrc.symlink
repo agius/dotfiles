@@ -11,4 +11,3 @@ set expandtab                   " tabs are spaces
 " start blank files in insert mode, files with content in normal mode
 :autocmd VimEnter * if empty(expand("%")) | startinsert | endif
 
-execute pathogen#infect()
