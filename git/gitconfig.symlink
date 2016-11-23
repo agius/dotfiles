@@ -6,8 +6,6 @@
 [user]
   name = agius
   email = andrew@atevans.com
-[credential]
-  helper = osxkeychain
 [alias]
   co = checkout
   promote = !$ZSH/bin/git-promote
