@@ -36,7 +36,7 @@
   ui = auto
   interactive = auto
 [core]
-  excludesfile = /Users/atevans/.gitignore
+  excludesfile = ~/.gitignore
   pager = less -FXRS -x2
 [apply]
   whitespace = nowarn
