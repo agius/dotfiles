@@ -1,2 +1,2 @@
 alias reload!='. ~/.zshrc'
-alias loadenv='set -o allexport; source .env; set +o allexport'
+alias expat='set -a; source .env; set +a'

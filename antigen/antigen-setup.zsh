@@ -4,7 +4,7 @@ source $HOME/.antigen-git/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-plugs=('bundler' 'git' 'heroku' 'node' 'rails' 'rake' 'rbenv' 'ruby' 'ssh-agent' 'sublime')
+plugs=('bundler' 'git' 'heroku' 'node' 'rails' 'rake' 'rbenv' 'ruby' 'ssh-agent' 'sublime' 'pyenv')
 for p in $plugs; do
   antigen bundle $p
 done

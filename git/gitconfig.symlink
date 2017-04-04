@@ -14,6 +14,8 @@
   merged  = !git branch --merged | grep -v '\\*' | cat # xargs -n 1 git branch -d
   del     = !git branch -d `git merged`
   done    = !git checkout master && git pull && git del
+  mstr    = !git checkout master && git pull
+  upbase  = !git checkout master && git pull && git checkout - && git rebase master
   st = status
   di = diff
   ci = commit

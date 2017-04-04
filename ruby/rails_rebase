@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+
+set -ue
+
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+
+git checkout master
+git pull
+git checkout $BRANCH
+git rebase master
+bundle
+bundle exec rake db:migrate db:test:prepare spec:fixture_builder:clean
+git checkout -- db/schema.rb
+git reset .
