@@ -5,7 +5,7 @@ sips --resampleWidth 60 "${f}/${1}" --out "${f}/icon-60.png"
 sips --resampleWidth 120 "${f}/${1}" --out "${f}/icon-60@2x.png"
 sips --resampleWidth 180 "${f}/${1}" --out "${f}/icon-60@3x.png"
 
-# app store icon 
+# app store icon
 sips --resampleWidth 512 "${f}/${1}" --out "${f}/iTunesArtwork"
 sips --resampleWidth 1024 "${f}/${1}" --out "${f}/iTunesArtwork@2x"
 
@@ -42,3 +42,12 @@ sips --resampleWidth 152 "${f}/${1}" --out "${f}/icon-safari@2x.png"
 sips --resampleWidth 206 "${f}/${1}" --out "${f}/icon-og.png"
 sips --resampleWidth 512 "${f}/${1}" --out "${f}/icon-og@2x.png"
 sips --resampleWidth 1024 "${f}/${1}" --out "${f}/icon-og@3x.png"
+
+# favicon.ico
+icon_sizes=(16 32 57 76 96 120 128 144 152 180 195 196 228 270 558)
+for sz in $icon_sizes
+do
+  echo "generating: ${f}/${1} -> ${f}/favicon-${sz}.png"
+  sips --resampleWidth 60 "${f}/${1}" --out "${f}/favicon-${sz}.png"
+done
+convert favicon-16.png favicon-24.png favicon-32.png favicon-48.png favicon-64.png favicon.ico

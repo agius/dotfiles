@@ -1,0 +1,4 @@
+--loglevel warn
+--dev
+--progress false
+--save
