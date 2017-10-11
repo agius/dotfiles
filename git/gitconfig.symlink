@@ -33,6 +33,7 @@
   unstage = reset HEAD
   rum = rebase master@{u}
   mrclean = !git reflog expire --expire=now --all && git gc --prune=now
+  tagit = !git tag -a $1 -m "Bump version to $1" && git push --tags
 [color]
   diff = auto
   status = auto
