@@ -4,3 +4,4 @@
 # antigen rbenv plugin overrides this to reside in /usr/local/Cellar/rbenv
 # which means homebrew can screw with rbenv's settings - we don't want that
 export RBENV_ROOT=~/.rbenv
+export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
