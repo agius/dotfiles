@@ -7,3 +7,7 @@ fi
 if [[ -d ~/Desktop ]] ; then
   alias desk='cd ~/Desktop'
 fi
+
+if [[ -f /usr/local/bin/howdoi ]] ; then
+  alias h='function hdi(){ howdoi $* -c -n 5; }; hdi'
+fi

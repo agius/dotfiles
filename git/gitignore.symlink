@@ -109,7 +109,11 @@ node_modules
 _site/
 .sass-cache/
 
-
 # Bower #
 #########
 bower_components
+
+# Keys & Secrets #
+##################
+
+*.pem
