@@ -4,8 +4,8 @@
 [hub]
   protocol = https
 [user]
-  name = agius
-  email = andrew@atevans.com
+	name = agius
+	email = andrew@atevans.com
 [alias]
   co = checkout
   count   = !git shortlog -sn
@@ -52,7 +52,7 @@
 [help]
   autocorrect = 1
 [http]
-  postBuffer = 524288000
+	postBuffer = 524288000
 [push]
   default = current
 [branch]
@@ -61,3 +61,8 @@
   autosquash = true
 [rerere]
   enabled = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
