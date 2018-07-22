@@ -1,2 +1,2 @@
 GOPATH="$HOME/go"
-PATH=$PATH:/usr/local/opt/go/libexec/bin
+PATH="$PATH:$GOPATH:/usr/local/opt/go/libexec/bin"
