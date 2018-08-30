@@ -9,7 +9,6 @@
 [alias]
   co      = checkout
   default = !git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
-master
   count   = !git shortlog -sn
   addnw   = !sh -c 'git diff -w --no-color "$@" | git apply --cached --ignore-whitespace' -
   amend   = !git commit --amend -C HEAD
