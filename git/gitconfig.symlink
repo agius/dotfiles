@@ -4,18 +4,20 @@
 [hub]
   protocol = https
 [user]
-	name = agius
-	email = andrew@atevans.com
+  name = agius
+  email = andrew@atevans.com
 [alias]
-  co = checkout
+  co      = checkout
+  default = !git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
+master
   count   = !git shortlog -sn
   addnw   = !sh -c 'git diff -w --no-color "$@" | git apply --cached --ignore-whitespace' -
   amend   = !git commit --amend -C HEAD
   merged  = !git branch --merged | grep -v '\\*' | cat # xargs -n 1 git branch -d
   del     = !git branch -d `git merged`
-  done    = !git checkout master && git pull && git del
-  mstr    = !git checkout master && git pull
-  upbase  = !git checkout master && git pull && git checkout - && git rebase master
+  done    = !git checkout $(git default) && git pull && git del
+  mstr    = !git checkout $(git default) && git pull
+  upbase  = !git checkout $(git default) && git pull && git checkout - && git rebase $(git default)
   st = status
   di = diff
   ci = commit
@@ -43,6 +45,7 @@
 [core]
   excludesfile = ~/.gitignore
   pager = less -FXRS -x2
+  hooksPath = /Users/andrewevans/.nvm/versions/node/v9.5.0/lib/node_modules/@mapbox/secret-shield/config/hooks
 [apply]
   whitespace = nowarn
 [mergetool]
@@ -66,3 +69,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[credential]
+	helper = osxkeychain
