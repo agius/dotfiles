@@ -1,4 +1,5 @@
---loglevel warn
---dev
---progress false
---save
+--loglevel warn=true
+--dev=true
+--progress false=true
+--save=true
+//registry.npmjs.org/:_authToken=${NPM_TOKEN}
