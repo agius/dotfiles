@@ -117,3 +117,7 @@ bower_components
 ##################
 
 *.pem
+
+# Sonar
+
+.scannerwork/
