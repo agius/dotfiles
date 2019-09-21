@@ -13,3 +13,9 @@ fi
 if [[ -f /usr/local/bin/whois ]] ; then
   alias whois='/usr/local/bin/whois'
 fi
+
+# airport command-line util
+# for use with aircrack-ng
+if [[ -f /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport ]] ; then
+  alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
+fi
