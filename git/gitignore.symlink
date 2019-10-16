@@ -45,6 +45,8 @@ Thumbs.db
 *.sublime-*
 .svn
 .env
+.env.local
+.env.*.local
 .snippets
 
 # Gems #
