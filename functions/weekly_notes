@@ -1,0 +1,67 @@
+#!/usr/bin/env ruby
+
+require 'erb'
+
+class FileMaker
+
+  TEMPLATE = <<~EOF
+# Week of <%= @monday.strftime '%B %d, %Y' %>
+
+Here's what's moving:
+
+## Personal
+
+- [ ] Something
+
+## Arbeitssachen
+
+- [ ] Something
+
+## Notes
+
+Some Notes
+EOF
+
+  def today
+    @today ||= Time.now
+  end
+
+  def monday
+    return @monday if @monday
+    day = if today.wday > 1
+      today.day - (today.wday - 1)
+    elsif today.wday < 1
+      today.day + 1
+    else
+      today.day
+    end
+    @monday = Time.new(today.year, today.month, day)
+  end
+
+  def filename
+    @filename ||= File.expand_path File.join('~', 'Dropbox', 'Weekly Notes', "#{monday.strftime '%Y-%m-%d'}-weekly-notes.md")
+  end
+
+  def renderer
+    @renderer ||= ERB.new(TEMPLATE)
+  end
+
+  def contents
+    renderer.result(binding)
+  end
+
+  def render!
+    if File.exist?(filename)
+      puts "File already exists: #{filename}"
+      return
+    end
+
+    File.open filename, 'w' do |f|
+      f.write(contents)
+    end
+    puts "Created #{filename.inspect}"
+    `open -a Typora #{filename.inspect}`
+  end
+end
+
+FileMaker.new.render!

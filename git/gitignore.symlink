@@ -46,6 +46,7 @@ Thumbs.db
 .svn
 .env
 .env.local
+.env.docker
 .env.*.local
 .snippets
 
