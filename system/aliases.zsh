@@ -1,5 +1,6 @@
 if [[ -d ~/.dotfiles ]] ; then
   alias dot='cd ~/.dotfiles'
+  alias weekly_notes='ruby ~/.dotfiles/script/weekly_notes'
 elif [[ -d ~/dotfiles ]] ; then
   alias dot='cd ~/dotfiles'
 fi

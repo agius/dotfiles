@@ -10,6 +10,7 @@ fi
 alias gca='git commit --amend -C HEAD'
 alias gl='git pull --prune'
 alias gp='git push origin HEAD'
+alias gph='git push heroku master'
 alias gd='git diff'
 alias gc='git commit'
 alias gg='git_checkout_grep'
