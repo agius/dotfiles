@@ -1,0 +1,7 @@
+CMD='heroku local'
+
+if [ -f Procfile.dev ] ; then
+  CMD = "$CMD -f Procfile.dev"
+fi
+
+eval $CMD
