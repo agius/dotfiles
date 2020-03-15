@@ -2,7 +2,8 @@ BRANCH=`git rev-parse --abbrev-ref HEAD`
 git checkout master && \
 git pull && \
 bundle && \
-bundle exec rake db:migrate db:test:prepare spec:fixture_builder:clean spec:fixture_builder:construct && \
+bundle exec rails db:migrate db:test:prepare && \
+yarn install --check-files && \
 git checkout -- db/schema.rb && \
 git checkout $BRANCH && \
 git reset .
