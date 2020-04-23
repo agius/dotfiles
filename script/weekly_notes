@@ -4,26 +4,28 @@ require 'erb'
 
 class FileMaker
 
+  DAY = 60 * 60 * 24
+
   TEMPLATE = <<~EOF
-# Week of <%= @monday.strftime '%B %d, %Y' %>
+# Week of <%= monday.strftime '%B %d, %Y' %>
 
 Here's what's moving:
+<%
+  0.upto(6) do |n|
+    today = @monday + (n * DAY)
+%>## <%= today.strftime('%a, %b %e').gsub(/\s+/, ' ').strip %>
 
-## Personal
+<% unless today.saturday? || today.sunday? %>**Work:**
+- [ ] Things
 
-- [ ] Something
+<% end %>**Personal:**
+- [ ] Things
 
-## Arbeitssachen
+**Notes:**
+- Things
 
-- [ ] Something
-
-## Cronulent
-
-- [ ] Something
-
-## Notes
-
-Some Notes
+<% end %>
+## Notes & Misc
 EOF
 
   def today

@@ -1,0 +1,33 @@
+###########################################################################
+#
+# home-directory / default rubocop config
+#
+# all rubocop configs inherit from default:
+# https://github.com/rubocop-hq/rubocop/blob/master/config/default.yml
+#
+# this one just turns off a lot of the dumb annoying crap
+# that doesn't matter
+#
+###########################################################################
+
+# seriously who gives a crap?
+Bundler/OrderedGems:
+  Enabled: false
+
+Gemspec/OrderedDependencies:
+  Enabled: false
+
+# because 😿 is a valid comment
+Style/AsciiComments:
+  Enabled: false
+
+# why disable perfectly good language features?
+Style/BeginBlock:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+# because fuck you 🖕 I want my code to look pretty not fugly
+Layout/*:
+  Enabled: false
