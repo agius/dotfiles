@@ -29,5 +29,5 @@ Style/BlockComments:
   Enabled: false
 
 # because fuck you 🖕 I want my code to look pretty not fugly
-Layout/*:
+Layout:
   Enabled: false
