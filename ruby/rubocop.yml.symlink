@@ -31,3 +31,21 @@ Style/BlockComments:
 # because fuck you 🖕 I want my code to look pretty not fugly
 Layout:
   Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/RedundantSelf:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
