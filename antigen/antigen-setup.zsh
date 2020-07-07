@@ -34,7 +34,7 @@ antigen bundle 'Tarrasch/zsh-autoenv'
 
 # node version manager: https://github.com/lukechilds/zsh-nvm
 export NVM_LAZY_LOAD=true
-export NVM_AUTO_USE=false
+export NVM_AUTO_USE=true
 antigen bundle lukechilds/zsh-nvm
 
 # Syntax highlighting bundle.

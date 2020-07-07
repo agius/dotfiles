@@ -20,6 +20,10 @@
 *.tar
 *.zip
 
+# Personal files #
+##################
+Procfile.atevans
+
 # Logs and databases #
 ######################
 *.log
@@ -44,6 +48,9 @@ Thumbs.db
 .sublime-*
 *.sublime-*
 .svn
+
+# dotenv files #
+################
 .env
 .env.local
 .env.docker
@@ -122,5 +129,4 @@ bower_components
 *.pem
 
 # Sonar
-
 .scannerwork/
