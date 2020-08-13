@@ -18,6 +18,14 @@ Here's what's moving:
 <% unless today.saturday? || today.sunday? %>**Work:**
 - [ ] Things
 
+**Meetings:**
+- [ ] 🧍 Standup
+<% if today.friday? %>- [ ] 👐 All-hands
+<% end %>
+
+**Code Reviews:**
+- [ ] Person: Pull Request
+
 <% end %>**Personal:**
 - [ ] Things
 
