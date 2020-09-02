@@ -6,6 +6,7 @@
 *.exe
 *.o
 *.so
+*.cache
 
 # Packages #
 ############
@@ -48,6 +49,7 @@ Thumbs.db
 .sublime-*
 *.sublime-*
 .svn
+*.code-workspace
 
 # dotenv files #
 ################
