@@ -19,6 +19,8 @@ Here's what's moving:
 - [ ] Things
 
 **Meetings:**
+<% if today.monday? %>- [ ] 🧠 Therapy
+<% end %>
 - [ ] 🧍 Standup
 <% if today.friday? %>- [ ] 👐 All-hands
 <% end %>
