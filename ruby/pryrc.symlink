@@ -1,14 +1,7 @@
-Pry.config.history.should_save = true
-Pry.config.history.should_load = true
-Pry.config.history.file = '~/.pry_history'
-
-class Object
-  def grep_methods(regex, public_only = true)
-    regex = Regexp.new(regex) unless regex.is_a?(Regexp)
-    _methods = public_only ? public_methods : public_methods + private_methods + protected_methods
-    _methods.select{|m| m.to_s =~ regex }
-  end
-end
+Pry.config.color = true
+Pry.config.history_save = true
+Pry.config.history_load = true
+Pry.config.history_file = '~/.pry_history'
 
 if defined?(ActiveRecord)
   class ActiveRecord::Base
