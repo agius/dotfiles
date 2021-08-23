@@ -19,6 +19,7 @@ plugs=(
   'ruby'
   'ssh-agent'
   'sublime'
+  'cda0/zsh-tfenv'
 )
 
 for p in $plugs; do
