@@ -14,6 +14,7 @@ plugs=(
   'rake'
   'rbenv'
   'lukechilds/zsh-nvm'
+  'mattberther/zsh-pyenv'
   'node'
   'pyenv'
   'ruby'
