@@ -44,7 +44,6 @@
 [core]
   excludesfile = ~/.gitignore
   pager = less -FXRS -x2
-  hooksPath = /Users/andrewevans/.nvm/versions/node/v9.5.0/lib/node_modules/@mapbox/secret-shield/config/hooks
 [apply]
   whitespace = nowarn
 [mergetool]
