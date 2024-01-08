@@ -5,6 +5,7 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 plugs=(
+  'asdf'
   'bundler'
   'fzf'
   'git'
@@ -12,11 +13,7 @@ plugs=(
   'heroku'
   'rails'
   'rake'
-  'rbenv'
-  'lukechilds/zsh-nvm'
-  'mattberther/zsh-pyenv'
   'node'
-  'pyenv'
   'ruby'
   'ssh-agent'
   'sublime'
@@ -27,17 +24,8 @@ for p in $plugs; do
   antigen bundle "$p"
 done
 
-if type brew &>/dev/null; then
-  antigen bundle brew
-fi
-
 AUTOENV_FILE_ENTER='.env'
 antigen bundle 'Tarrasch/zsh-autoenv'
-
-# node version manager: https://github.com/lukechilds/zsh-nvm
-export NVM_LAZY_LOAD=true
-export NVM_AUTO_USE=true
-antigen bundle lukechilds/zsh-nvm
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
