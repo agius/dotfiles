@@ -5,7 +5,6 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 plugs=(
-  'asdf'
   'bundler'
   'fzf'
   'git'
@@ -13,6 +12,7 @@ plugs=(
   'heroku'
   'rails'
   'rake'
+  'mise'
   'node'
   'ruby'
   'ssh-agent'
