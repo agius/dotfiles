@@ -51,6 +51,8 @@ Thumbs.db
 *.sublime-*
 .svn
 *.code-workspace
+.claude
+.zed
 
 # dotenv files #
 ################
